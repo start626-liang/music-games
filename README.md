@@ -1,2 +1,4 @@
-# hello-world
-Hello world new project template.
+# music games
+实现功能：
+    1、随机生成掉落物
+    2、控制台获取成果
