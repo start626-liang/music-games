@@ -1576,19 +1576,6 @@
       "__id__": 2
     },
     "_enabled": true,
-    "maxStarDuration": 0,
-    "minStarDuration": 0,
-    "backA": null,
-    "back2": null,
-    "back3": null,
-    "back4": null,
-    "back5": null,
-    "back6": null,
-    "back7": null,
-    "back8": null,
-    "ground": null,
-    "player": null,
-    "scoreDisplay": null,
     "_id": "a4Muc5btBAZoJ8GSgLQmWH"
   }
 ]

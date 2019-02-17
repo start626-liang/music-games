@@ -15,24 +15,23 @@ cc.Class({
     },
     onLoad(){
         
-        window.eval('window.Global = { resultA: false }')
         
-
+        
+        
         const jumpDown = cc.moveBy(2, cc.v2(0, -550)).easing(cc.easeCubicActionIn());
         this.node.runAction(jumpDown)
     },
     update (dt) {
         let s = false
+        //测试是否到达底部
         if(this.node.position.y < -268){
             this.count += 1
             window.Global.resultA = true
-            if(this.count > 120) {
+            if(this.count > 10) {
                 window.Global.resultA = false
                 this.node.destroy()
                 return
-            } else {
-                // cc.log(this.aa)
-            }
+            } 
         }
     }
 });
