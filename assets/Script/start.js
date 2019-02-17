@@ -11,37 +11,28 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // 星星和主角之间的距离小于这个数值时，就会完成收集
-        reapBottomDistance: 0,
-        reapTopDistance: 0,
-        
+        count: 0
     },
-    a(){
-        var jumpDown = cc.moveBy(2, cc.v2(0, -550)).easing(cc.easeCubicActionIn());
-        this.node.runAction(jumpDown)
-    },
-    b(){cc.log(cc.winSize)},
     onLoad(){
         
-        var d = cc.sequence([this.a(), this.b()]);
+        window.eval('window.Global = { resultA: false }')
         
-    },
-    start () {
-        
-    },
 
-    update (dt) {
-        if(this.node.position.y > -250){
-            cc.log(this.node.position)
-        } else {
-            return
-        }
+        const jumpDown = cc.moveBy(2, cc.v2(0, -550)).easing(cc.easeCubicActionIn());
+        this.node.runAction(jumpDown)
     },
-    onEnable(){
-        // this.intervalEvent()
-        // cc.log(this.node.position.x)
-    }, 
-    lateUpdate(){
-        
+    update (dt) {
+        let s = false
+        if(this.node.position.y < -268){
+            this.count += 1
+            window.Global.resultA = true
+            if(this.count > 120) {
+                window.Global.resultA = false
+                this.node.destroy()
+                return
+            } else {
+                // cc.log(this.aa)
+            }
+        }
     }
 });
