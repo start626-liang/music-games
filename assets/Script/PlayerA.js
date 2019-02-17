@@ -32,7 +32,7 @@ cc.Class({
         // cc.log(event.keyCode)
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                if(window.Global.resultA){
+                if(window.Global.resultA && window.Global.list[0] == 1){
                     window.Global.num +=1
                     cc.log(window.Global.num)
                     window.Global.resultA = false
@@ -56,6 +56,8 @@ cc.Class({
             let max = Math.floor(1);
 
             if((Math.floor(Math.random() * (max - min)) + min) == 5){
+                window.Global.list.push(1)
+
                 this.interval = 0
                 // 使用给定的模板在场景中生成一个新节点
                 try{

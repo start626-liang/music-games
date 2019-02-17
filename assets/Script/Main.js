@@ -32,7 +32,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        window.Global = { resultA: false, num:0 }
+        window.Global = { resultA: false, num:0, list:[] }
     },
 
     start () {
