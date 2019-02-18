@@ -27,11 +27,16 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+        result: {
+            default: null,
+            type: cc.Label,
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+        cc.log(this.result)
         window.Global = { resultA: false, num:0, list:[] }
     },
 
@@ -39,5 +44,8 @@ cc.Class({
 
     },
 
-    // update (dt) {},
+    update (dt) {
+        this.result.string = window.Global.num
+        
+    },
 });
